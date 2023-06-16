@@ -1,11 +1,12 @@
-
+import Nav from './components/Nav';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     <p className='m-12'> hi</p>
-     <button className="btn">Button</button>
+    <div className='app min-h-screen' >
+<Nav />
+     <main> Main</main>
+     <footer>footer</footer>
     </div>
   );
 }
