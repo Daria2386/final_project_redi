@@ -1,12 +1,13 @@
 import Nav from './components/Nav';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className='app min-h-screen' >
 <Nav />
      <main> Main</main>
-     <footer>footer</footer>
+     <Footer />
     </div>
   );
 }
