@@ -32,31 +32,33 @@ if (j> 1){
     }
   
   return (
-    <div>
-      <div>
-      <h3>Cleaners   </h3>
-      <div className='flex'>  <p className='inline-block'>{amount}X</p> <img className='h-36 w-36' src="https://ik.imagekit.io/a0vaoqpiwv/Screenshot_2023-06-18_at_19.39.05.png?updatedAt=1687110010569" alt="" /> </div>
-      </div>
-
-      
-      
-     <button className='btn bg-[#D4EDE5]' onClick={numInc}>+1</button>
-     <button className='btn bg-[#D4EDE5]' onClick={numDec}>-1</button>
+    
+      <div className='lg:flex flex-row justify-evenly'>
+      <h2 className='pt-6 text-center'>CLEANERS</h2>
+   <div className='flex justify-center gap-6 items-center x'>
+    <p className=' text-center text-5xl'>{hours} X </p>
+    <img className='h-36 w-36' src="https://ik.imagekit.io/a0vaoqpiwv/Screenshot_2023-06-18_at_19.39.05.png?updatedAt=1687110010569" alt="" />
    
-
-
-
-   <div>
-    <h3>Hours</h3>
-    <div className='flex justify-center content-center'> <p className='bg-sky-500/100 text-center'>{hours} X </p>
-    <img className='h-36 w-36' src="https://ik.imagekit.io/a0vaoqpiwv/clock.png?updatedAt=1687110318276" alt="" />
+   <div className='flex flex-col'>
+    <button className='btn bg-[#D4EDE5]' onClick={numInc}>+1</button>
+   <button className='btn  bg-[#D4EDE5]' onClick={numDec}>-1</button>
    </div>
-   <div><button className='btn bg-[#D4EDE5]' onClick={hIncr}>+1</button>
+
+   </div>
+    
+    
+    <h2 className='pt-6 text-center'>HOURS</h2>
+   <div className='flex justify-center  gap-6  items-center x'>
+    <p className=' text-center text-5xl'>{hours} X </p>
+    <img className='h-36 w-36' src="https://ik.imagekit.io/a0vaoqpiwv/clock.png?updatedAt=1687110318276" alt="" />
+   
+   <div className='flex flex-col'>
+    <button className='btn bg-[#D4EDE5]' onClick={hIncr}>+1</button>
    <button className='btn  bg-[#D4EDE5]' onClick={hDecr}>-1</button>
    </div>
 
    </div>
-    <input type="date" />
+    
     </div>
   )
 }
