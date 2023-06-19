@@ -1,0 +1,19 @@
+.bg-img{
+  background-image: url(https://ik.imagekit.io/a0vaoqpiwv/photo-1481277542470-605612bd2d61.avif?updatedAt=1687094755408);
+
+}
+.cardone{
+  background-color: #F3EDC0;
+}
+.cardtwo{
+  background-color: #F8E3E3;  
+}
+.cardthree{
+  background-color: #D4EDE5;
+}
+.roundc{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+background-color: #F1D204;
+}
