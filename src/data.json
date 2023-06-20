@@ -1,0 +1,122 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "BASIC CLEANING",
+      "price": "€35.90/h",
+      "photo": "https://ik.imagekit.io/a0vaoqpiwv/room.svg?updatedAt=1686849548994",
+      "description": "Reliable home cleaning service. Good choice if you want to maintain a clean home.Reduced price for subscribers.Available last-minute"
+    },
+    {
+      "id": 2,
+      "name": "DEEP CLEANINGg",
+      "price": "€43.90/h",
+      "photo": "https://ik.imagekit.io/a0vaoqpiwv/house.svg?updatedAt=1686849513683",
+      "description": "After-builders cleanup. Reduced price of cleaning equipment.Extensive dust cleaning.Cleaning before the landlord inspection"
+    },
+    {
+      "id": 3,
+      "name": "OFFICE CLEANING",
+      "price": "€53.90/h",
+      "photo": "https://ik.imagekit.io/a0vaoqpiwv/desk.svg?updatedAt=1686849502136",
+      "description": "Customized offer for your office.Flexible plans for small businesses. Legally-registered office cleaning professionals"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "serviceId": 1,
+      "client": "John Smith",
+      "email": "e@email.com",
+      "phone": "+34 4433 22",
+      "payment": "Paypal",
+      "cleaners": "1",
+      "hours": "2",
+      "date": "12.3.2023",
+      "amount": "55",
+      "address": "balham"
+    },
+    {
+      "id": 2,
+      "serviceId": 2,
+      "client": "Mary Elizabeth Smith",
+      "email": "e@email.com",
+      "phone": "+34 44337702",
+      "payment": "Paypal",
+      "cleaners": "2",
+      "hours": "4",
+      "date": "12.3.2023",
+      "amount": "55",
+      "address": "balham"
+    },
+    {
+      "id": 3,
+      "serviceId": 2,
+      "client": "Jim Brown",
+      "email": "e@email.com",
+      "phone": "+34 4433 22",
+      "payment": "Paypal",
+      "cleaners": "6",
+      "hours": "4",
+      "date": "12.3.2023",
+      "amount": "55",
+      "address": "balham"
+    },
+    {
+      "id": 4,
+      "serviceId": 3,
+      "client": "Elizabeth Brown",
+      "email": "e@email.com",
+      "phone": "+34 4433 22",
+      "payment": "Paypal",
+      "cleaners": "6",
+      "hours": "4",
+      "date": "12.3.2023",
+      "amount": "55",
+      "address": "balham"
+    },
+    {
+      "id": 5,
+      "serviceId": 1,
+      "client": "Xiao Ping",
+      "email": "e@email.com",
+      "phone": "+34 4433 22",
+      "payment": "Paypal",
+      "cleaners": "6",
+      "hours": "4",
+      "date": "12.3.2023",
+      "amount": "55",
+      "address": "balham"
+    },
+    {
+      "id": 6,
+      "serviceId": 3,
+      "client": "Ada María",
+      "email": "e@email.com",
+      "phone": "+34 4433 22",
+      "payment": "Paypal",
+      "cleaners": "6",
+      "hours": "4",
+      "date": "12.3.2023",
+      "amount": "55",
+      "address": "balham"
+    }
+  ],
+  "payments": [
+    "Paypal", "CreditCard", "Bank transfer", "Cash on delivery"
+  ],
+
+  
+  "admin": {
+    "name": "Daria K",
+    "email": "d@email.com",
+    "password": "abcd"
+  }
+}
+
+
+
+
+
+
+
