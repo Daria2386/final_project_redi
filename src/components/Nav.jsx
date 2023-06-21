@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Nav() {
   return (
@@ -18,13 +19,17 @@ function Nav() {
     </div>
   </div>
   <div className="navbar-center">
-    {/* <a className="btn btn-ghost normal-case text-xl">Done With Dirt</a> */}
+    
   </div>
   <div className="navbar-end">
-    <button className="btn border-emerald-600 bg-[#3AB795]">Log in
+     <Link to={"/login"}>
+     <button className="btn border-emerald-600 bg-[#3AB795]">Log in
     </button>
-    <button className="btn border-emerald-600 bg-[#F1D204]"> Book now
-    </button>
+     </Link>
+     
+    <Link to={"/booking"}> <button className="btn border-emerald-600 bg-[#F1D204]"> Book now
+    </button></Link>
+    
   </div>
 </div>
     </div>

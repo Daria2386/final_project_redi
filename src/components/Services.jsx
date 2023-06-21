@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Services() {
   return (
@@ -22,7 +23,8 @@ function Services() {
             <p>PRICE PER CLEANER</p>
             <p>€35.90/h</p>
             <div className="card-actions">
-              <button className="btn bg-[#3AB795] ">Book Now</button>
+              <Link to={"/booking"}> <button className="btn bg-[#3AB795] ">Book Now</button></Link>
+              
             </div>
           </div>
         </div>
@@ -44,7 +46,9 @@ function Services() {
             <p>PRICE PER CLEANER</p>
             <p>€43.90/h</p>
             <div className="card-actions">
-              <button className="btn bg-[#3AB795] ">Book Now</button>
+
+              <Link to={"/booking"}>  <button className="btn bg-[#3AB795] ">Book Now</button> </Link>
+             
             </div>
           </div>
         </div>
@@ -65,7 +69,8 @@ function Services() {
             <p>PRICE PER CLEANER</p>
             <p> €53.90/h</p>
             <div className="card-actions">
-              <button className="btn bg-[#3AB795] ">Book Now</button>
+              <Link to={"/booking"}> <button className="btn bg-[#3AB795] ">Book Now</button></Link>
+              
             </div>
           </div>
         </div>

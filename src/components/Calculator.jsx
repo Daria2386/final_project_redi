@@ -34,9 +34,9 @@ if (j> 1){
   return (
     
       <div className='lg:flex flex-row justify-evenly'>
-      <h2 className='pt-6 text-center'>CLEANERS</h2>
+      <h2 className='pt-6 text-center lg:mt-10'>CLEANERS</h2>
    <div className='flex justify-center gap-6 items-center x'>
-    <p className=' text-center text-5xl'>{hours} X </p>
+    <p className=' text-center text-5xl'>{amount} X </p>
     <img className='h-36 w-36' src="https://ik.imagekit.io/a0vaoqpiwv/Screenshot_2023-06-18_at_19.39.05.png?updatedAt=1687110010569" alt="" />
    
    <div className='flex flex-col'>
@@ -47,7 +47,7 @@ if (j> 1){
    </div>
     
     
-    <h2 className='pt-6 text-center'>HOURS</h2>
+    <h2 className='pt-6 text-center lg:mt-10'>HOURS</h2>
    <div className='flex justify-center  gap-6  items-center x'>
     <p className=' text-center text-5xl'>{hours} X </p>
     <img className='h-36 w-36' src="https://ik.imagekit.io/a0vaoqpiwv/clock.png?updatedAt=1687110318276" alt="" />

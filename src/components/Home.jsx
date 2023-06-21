@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <div>
@@ -22,9 +22,10 @@ function Home() {
               type="text"
               placeholder="Enter your postcode"
             />
-            <button className="btn border-emerald-600 bg-[#F1D204]">
+            <Link to={"/booking"}> <button className="btn border-emerald-600 bg-[#F1D204]">
               Book now
-            </button>
+            </button></Link>
+            
           </div>
         </div>
       </div>
