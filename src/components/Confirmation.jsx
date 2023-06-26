@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Confirmation() {
+function Confirmation({createdOrder, service}) {
   return (
-    <div>
-      <section>
-      <h1>Payment order successfull</h1>
-    <ion-icon   name="checkmark-done-circle"></ion-icon>
-    <p>Booking details are:</p>
-    <p>You have choosen:</p>
-    <p>Amount of cleaners:</p>
-    <p>Duration</p>
-    <p>Date</p>
-     
-    </section>
+    <div className='flex flex-col min-h-full'>
+      {createdOrder && 
+        <section className='flex flex-col  text-center'>
+        <h1>Payment order successfull</h1>
+        <div>
+        <ion-icon name="checkmark-done-circle"></ion-icon></div>
+      <p>Booking details are: </p>
+      <p>You have choosen: {service.name}</p>
+      <p>A number of cleaners: {createdOrder.cleaners}</p>
+      <p>Duration: {createdOrder.hours} hour(s)</p>
+      <p>Date :{createdOrder.date}</p>
+       
+      </section>
+      }
+      
     </div>
   )
 }

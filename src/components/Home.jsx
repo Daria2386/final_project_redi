@@ -17,20 +17,19 @@ function Home() {
               Book a verified cleaning person for your home or office in
               Germany.
             </p>
-            <input
-              className="h-12 rounded bg-slate-100"
-              type="text"
-              placeholder="Enter your postcode"
-            />
-            <Link to={"/booking"}> <button className="btn border-emerald-600 bg-[#F1D204]">
+            
+            <a href="#services"> <button className="btn border-emerald-600 bg-[#F1D204]">
               Book now
-            </button></Link>
+            </button></a>
             
           </div>
         </div>
       </div>
      
     </div>
+    
+
+
   );
 }
 

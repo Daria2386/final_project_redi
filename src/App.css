@@ -1,3 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  /* border:  red solid 1px; */
+
+}
+
 .bg-img{
   background-image: url(https://ik.imagekit.io/a0vaoqpiwv/photo-1481277542470-605612bd2d61.avif?updatedAt=1687094755408);
 
@@ -21,3 +32,4 @@ ion-icon {
   color: #3AB795;
   font-size: 128px;
   }
+
