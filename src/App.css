@@ -32,4 +32,17 @@ ion-icon {
   color: #3AB795;
   font-size: 128px;
   }
+  ion-icon[name="trash-outline"] {
+    color: red;
+    font-size: 16px;
+  }
+  ion-icon[name="add-circle-outline"] {
+    color: blue;
+    font-size: 70px;
+  }
 
+  #BASIC-CLEANING {
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+  }

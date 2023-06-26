@@ -71,7 +71,7 @@ function App() {
         />
         <Route
           path="/admin"
-          element={<AdminService services={services} isLogged={isLogged} />}
+          element={<AdminService setServices={setService} services={services} isLogged={isLogged} />}
         />
 
         <Route

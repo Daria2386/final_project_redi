@@ -13,7 +13,7 @@ function Services({ services, setService, incTotal }) {
 
   }
   return (
-      <div id="services " className="flex flex-col wrap lg:flex-row gap-12  items-center  justify-center  lg:px-5 lg:py-5 ">
+      <div id="services" className="flex flex-col wrap lg:flex-row gap-12  items-center  justify-center  lg:px-5 lg:py-5 ">
         {services ? 
         services.map((i, index) => (
           <div key={index} className="my-5 card    lg:w-96 w-80  bg-base-100 shadow-xl cardone">

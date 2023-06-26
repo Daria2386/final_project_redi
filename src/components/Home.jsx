@@ -18,9 +18,9 @@ function Home() {
               Germany.
             </p>
             
-            <a href="#services"> <button className="btn border-emerald-600 bg-[#F1D204]">
-              Book now
-            </button></a>
+            <button className="btn border-emerald-600 bg-[#F1D204]">
+              <a href="#services">Book Now</a>
+            </button>
             
           </div>
         </div>

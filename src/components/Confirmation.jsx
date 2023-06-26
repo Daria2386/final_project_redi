@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import { CircleLoader } from "react-spinners";
 
 function Confirmation({createdOrder, service}) {
   return (
     <div className='flex flex-col min-h-full'>
-      {createdOrder && 
+      {createdOrder ?
         <section className='flex flex-col  text-center'>
         <h1>Payment order successfull</h1>
         <div>
@@ -15,6 +16,11 @@ function Confirmation({createdOrder, service}) {
       <p>Date :{createdOrder.date}</p>
        
       </section>
+      :<div className="h-96 flex justify-center items-center">
+      {/* <span className="loading loading-dots loading-lg"></span> */}
+      <CircleLoader />
+                </div>
+              
       }
       
     </div>
