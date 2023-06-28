@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { CircleLoader } from "react-spinners";
 
 function Services({ services, setService, incTotal }) {
@@ -16,18 +15,18 @@ function Services({ services, setService, incTotal }) {
       <div id="services" className="flex flex-col wrap lg:flex-row gap-12  items-center  justify-center  lg:px-5 lg:py-5 ">
         {services ? 
         services.map((i, index) => (
-          <div key={index} className="my-5 card    lg:w-96 w-80  bg-base-100 shadow-xl cardone">
+          <div key={index} className={`my-5 card    lg:w-96 w-80 bg-[${i.bgColor}] shadow-xl cardone`}>
             <figure className="px-10 pt-10 h-[26rem]">
               <img src={i.photo} alt="Shoes" className="rounded-xl " />
             </figure>
-            <div className="card-body items-center text-center h-96">
+            <div className="card-body  items-center text-center h-96">
               <h2 className="card-title">{i.name}</h2>
               <p>{i.description}</p>
 
               <p>{i.price}</p>
               <div className="card-actions">
                
-                  <button onClick={() => serviceSelector(i)} className="btn bg-[#3AB795] ">Book Now</button>
+                  <button onClick={() => serviceSelector(i)} className="btn bg-[#3AB795]">Book Now</button>
                
               </div>
             </div>

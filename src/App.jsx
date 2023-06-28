@@ -2,8 +2,6 @@ import Nav from "./components/Nav";
 import "./App.css";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import Booking from "./components/Booking";
-import Calculator from "./components/Calculator";
 import Services from "./components/Services";
 import Steps from "./components/Steps";
 import { Route, Routes } from "react-router-dom";
@@ -12,11 +10,11 @@ import Login from "./components/Login";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import AdminService from "./AdminService";
+import SecondPage from "./components/SecondPage";
 
 function App() {
   const [admin, setAdmin] = useState();
   const [isLogged, setIsLogged] = useState(false);
-  const [payments, setPayments] = useState();
   const [orders, setOrders] = useState();
   const [services, setServices] = useState();
   const [service, setService] = useState();
@@ -24,15 +22,25 @@ function App() {
   const [amount, setAmount] = useState(1);
   const [hours, setHours] = useState(1);
   const [createdOrder, setCreatedOrder] = useState()
+
+  function updateServices () {
+    axios("https://backendfinal-sy2f.onrender.com/services")
+      .then((i) => setServices(i.data))
+      .catch((i) => console.log(i));
+  }
   useEffect(() => {
     //api code goes here
     axios("https://backendfinal-sy2f.onrender.com/services")
       .then((i) => setServices(i.data))
       .catch((i) => console.log(i));
+      axios("https://backendfinal-sy2f.onrender.com/orders ")
+      .then((i) => setOrders(i.data))
+      .catch((i) => console.log(i));
     axios("https://backendfinal-sy2f.onrender.com/admin")
       .then((i) => setAdmin(i.data))
       .catch((i) => console.log(i));
   }, []);
+  
   function incTotal (a) {
     setTotal(i => i = Math.round(i + Number(a)))
 
@@ -64,24 +72,26 @@ function App() {
           path="/booking"
           element={[
             <Nav />,
-            <Calculator amount={amount} setAmount={setAmount} hours={hours} setHours={setHours} service={service} incTotal={incTotal} decTotal={decTotal} total={total}/>,
-            <Booking setCreatedOrder={setCreatedOrder} amount={amount}hours={hours}total={total} service={service}/>,
-            <Footer />,
+            <SecondPage  key="seconpage"amount={amount} setAmount={setAmount} hours={hours} setHours={setHours} service={service} incTotal={incTotal} decTotal={decTotal} total={total} setCreatedOrder={setCreatedOrder}   />,
+            
+            <Footer />
+
+            
           ]}
         />
         <Route
           path="/admin"
-          element={<AdminService setServices={setService} services={services} isLogged={isLogged} />}
+          element={<AdminService key="adminservice" orders={orders} updateServices={updateServices} setServices={setService} services={services} isLogged={isLogged} />}
         />
 
         <Route
           path="/confirmation"
-          element={[<Nav />, <Confirmation createdOrder={createdOrder} service={service} />, <Footer />]}
+          element={[<Nav />, <Confirmation key="confirmationx" createdOrder={createdOrder} service={service} />, <Footer />]}
         />
         <Route
           path="/login"
           element={[
-            <Login
+            <Login key="login"
               setIsLogged={setIsLogged}
               isLogged={isLogged}
               admin={admin}

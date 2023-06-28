@@ -20,8 +20,12 @@ function Login({ user, setUser, admin, setAdmin, isLogged, setIsLogged }) {
     }
   };
 
+  useEffect(() => {
+
+  }, [])
+
   return (
-    <div>
+    <div className="cardone">
       <form onSubmit={log} className="flex flex-col justify-center items-center items-center min-h-screen">
         <input
           type="mail"

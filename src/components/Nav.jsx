@@ -13,8 +13,8 @@ function Nav() {
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
          <li><Link to={'/'}>Homepage</Link></li>
-         <li><a href="#services">Our services</a></li>
-        <li><Link>Become a cleaner</Link></li>
+         <li><a href="/#services">Our services</a></li>
+        
       </ul>
     </div>
   </div>

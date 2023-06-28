@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+
 
 function Calculator({service, incTotal, decTotal, total, amount, setAmount, hours, setHours}) {
   function numInc() {
@@ -38,7 +38,7 @@ function Calculator({service, incTotal, decTotal, total, amount, setAmount, hour
 
   return (
     <>
-    <div className="lg:flex flex-row justify-evenly">
+    <div className="lg:flex flex-row  justify-evenly lg:my-24">
       
       <h2 className="pt-6 text-center lg:mt-10">CLEANERS</h2>
       <div className="flex justify-center gap-6 items-center x">

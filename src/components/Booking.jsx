@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import data from "../data.json";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 function Booking({service, total, amount, hours, setCreatedOrder}) {
   const navigate = useNavigate()
@@ -33,11 +33,11 @@ function Booking({service, total, amount, hours, setCreatedOrder}) {
 
   }
   return (
-    <div>
+    <div >
       
-      <form onSubmit={submitHandler} className="flex flex-col items-center justify-center ">
-        <div className=" lg:flex">
-        <div>
+      <form onSubmit={submitHandler} className="flex flex-col items-center justify-center mt-24">
+        <div className=" lg:flex  justify-center">
+        <div className="flex lg:block flex-col justify-center  ">
 
           <input
             type="text"
@@ -86,7 +86,7 @@ function Booking({service, total, amount, hours, setCreatedOrder}) {
         </div>
 </div>
     
- <button type="submit" className="btn border-emerald-600 bg-[#3AB795] mt-5" >
+ <button type="submit" className="btn border-emerald-600 bg-[#3AB795]  my-5 "  >
             Confirm
           </button>
        
