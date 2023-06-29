@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 
 function AdminOrders({orders}) {
 
-  useEffect(() => {
+  // useEffect(() => {
 
-  }, [])
+  // }, [])
   return (
   <div>
     <div className="overflow-x-auto">

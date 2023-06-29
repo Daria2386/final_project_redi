@@ -108,6 +108,7 @@ function App() {
             <AdminService
             setServices={setServices}
               orders={orders}
+              setOrders={setOrders}
               updateServices={updateServices}
               setService={setService}
               services={services}

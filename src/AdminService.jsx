@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import AdminOrders from "./components/AdminOrders";
 
 function AdminService({
   orders,
+  setOrders,
   isLogged,
   services,
   setServices,
@@ -12,6 +13,7 @@ function AdminService({
   updateServices,
 }) {
   const navigate = useNavigate();
+  const [count, setCount] = useState(0)
 
   function deleteService(n) {
     axios
@@ -19,12 +21,20 @@ function AdminService({
       .then((i) => console.log(i.data))
       .catch((i) => console.log(i));
     // updateServices();
+    setCount(i => i + 1)
   }
   useEffect(() => {
     if (!isLogged) {
       navigate("/");
-    } 
-  },[]);
+    }
+    setTimeout(() => {
+      axios("https://backendfinal-sy2f.onrender.com/services").then(i => setServices(i.data)).catch(i => console.log(i))
+      axios("https://backendfinal-sy2f.onrender.com/orders").then(i => setOrders(i.data)).catch(i => console.log(i))
+
+    }, 1500)
+
+    
+  }, [count]);
 // make single useeffect from app.jsx
   function submitHandler(e) {
     e.preventDefault();
@@ -37,7 +47,8 @@ function AdminService({
       })
       .then((i) => console.log(i.data))
       .catch((i) => console.log(i));
-    // axios("https://backendfinal-sy2f.onrender.com/services").then(i => setServices(i.data)).catch(i => console.log(i))
+      setCount(i => i + 1)
+    
     window.add_service_modal.close();
   }
 
