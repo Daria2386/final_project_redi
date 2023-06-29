@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>
+    
 <footer className="footer footer-center p-10 bg-neutral text-primary-content">
   <div>
     
@@ -20,7 +20,7 @@ function Footer() {
   </div>
 </footer>
 
-    </div>
+   
   )
 }
 

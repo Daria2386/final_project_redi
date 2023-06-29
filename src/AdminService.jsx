@@ -8,6 +8,7 @@ function AdminService({
   isLogged,
   services,
   setServices,
+  setService,
   updateServices,
 }) {
   const navigate = useNavigate();
@@ -22,9 +23,9 @@ function AdminService({
   useEffect(() => {
     if (!isLogged) {
       navigate("/");
-    }
-  }, []);
-
+    } 
+  },[]);
+// make single useeffect from app.jsx
   function submitHandler(e) {
     e.preventDefault();
     axios
@@ -36,7 +37,7 @@ function AdminService({
       })
       .then((i) => console.log(i.data))
       .catch((i) => console.log(i));
-    updateServices();
+    // axios("https://backendfinal-sy2f.onrender.com/services").then(i => setServices(i.data)).catch(i => console.log(i))
     window.add_service_modal.close();
   }
 
@@ -59,7 +60,7 @@ function AdminService({
             <th>Name</th>
             <th>ID</th>
             <th>Price</th>
-            <th>Delete</th>
+            <th className="">Delete</th>
           </tr>
         </thead>
         <tbody>

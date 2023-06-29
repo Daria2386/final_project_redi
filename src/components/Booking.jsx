@@ -75,8 +75,8 @@ function Booking({service, total, amount, hours, setCreatedOrder}) {
             <option disabled selected>
               Choose your payment?
             </option>
-            {data.payments.map((i) => (
-              <option>{i}</option>
+            {data.payments.map((i, index) => (
+              <option key={index}>{i}</option>
               ))}
           </select>
           <textarea

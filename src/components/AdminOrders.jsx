@@ -8,7 +8,7 @@ function AdminOrders({orders}) {
   return (
   <div>
     <div className="overflow-x-auto">
-  <table className="table">
+  <table className="table overflow-auto">
     {/* head */}
     <thead>
       <tr>

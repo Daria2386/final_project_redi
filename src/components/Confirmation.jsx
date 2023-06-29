@@ -3,7 +3,7 @@ import { CircleLoader } from "react-spinners";
 
 function Confirmation({createdOrder, service}) {
   return (
-    <div className='flex flex-col my-16  lg:my-40'>
+    <div className='flex flex-col my-16 lg:h-[50rem]'>
       {createdOrder ?
         <section className='flex flex-col  text-center'>
         <h1>Payment order successfull</h1>

@@ -27,8 +27,7 @@ function Nav() {
     </button>
      </Link>
      
-    {/* <a href='#services'> <button className="btn border-emerald-600 bg-[#F1D204]"> Book now
-    </button></a> */}
+    
     
   </div>
 </div>
